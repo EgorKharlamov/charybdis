@@ -2,11 +2,10 @@
 #define LOWER 1
 #define RAISE 2
 #define GAME 3
-#define GAMEINC 4
-#define MOUSE 5
-#define MOUSESNIPE 6
-#define VIM 7
-#define SYMBOLS 8
+#define MOUSE 4
+#define MOUSESNIPE 5
+#define VIM 6
+#define SYMBOLS 7
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
