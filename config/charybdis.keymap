@@ -19,6 +19,16 @@
             key-positions = <7 19>;
         };
 
+        SwitchToRus {
+            bindings = <&kp LC(LA(LS(R)))>;
+            key-positions = <27 28>;
+        };
+
+        SwitchToEng {
+            bindings = <&kp LC(LA(LS(R)))>;
+            key-positions = <32 31>;
+        };
+
         bootloaderLeft {
             bindings = <&bootloader>;
             key-positions = <0 13>;
@@ -52,7 +62,7 @@
     trackball_snipe_listener {
         compatible = "zmk,input-behavior-listener";   
         device = <&vtrackball>;
-        layers = <0 1 2 3 4 5 6>;
+        layers = <0 2 3 4 5 6>;
         evt-type = <INPUT_EV_REL>;
         x-input-code = <INPUT_REL_X>;
         y-input-code = <INPUT_REL_Y>;
@@ -68,6 +78,8 @@
         x-input-code = <INPUT_REL_MISC>;
         y-input-code = <INPUT_REL_WHEEL>;
         y-invert;
+        scale-multiplier = <1>;
+        scale-divisor = <12>;
         bindings = <&ib_wheel_scaler 1 16>;
     };
 
@@ -135,11 +147,11 @@
             // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
                    &trans         &trans       &trans         &trans      &sys_reset   &bootloader         &trans       &trans         &trans        &trans        &trans        &trans
             // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                   &trans         &trans       &kp UP         &trans       &trans         &trans           &kp N7       &kp N8         &kp N9        &kp N0        &kp HOME      &kp F1
+                   &trans         &trans       &kp UP         &trans       &trans         &trans           &kp N7       &kp N8         &kp TILDE     &kp N0        &kp HOME      &kp F1
             // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                   &trans       &kp LEFT       &kp DOWN     &kp RIGHT      &trans         &trans           &kp N4       &kp N5         &kp N6        &none         &trans        &kp F10
+                   &trans       &kp LEFT       &kp DOWN     &kp RIGHT      &trans         &trans           &kp LEFT     &kp DOWN       &kp UP        &kp RIGHT     &trans        &kp F10
             // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                 &kp LEFT_ALT    &trans        &trans         &trans        &mo 7        &kp PLUS          &kp N1       &kp N2         &kp N3        &kp DOT       &trans        &kp F20
+                 &kp LEFT_ALT    &trans        &trans         &trans        &mo 6        &kp PLUS          &kp N1       &kp N2         &kp N3        &kp DOT       &trans        &kp F20
             // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
                                                               &trans       &trans        &trans            &trans        &trans    
             //                                           ╰─────────────┤─────────────┤─────────────┤   ├─────────────┼─────────────╯
