@@ -39,10 +39,10 @@
             key-positions = <32 31>;
         };
 
-        PrintScreen {
-            bindings = <&kp PRINTSCREEN>;
-            key-positions = <16 22>;
-        }
+        // PrintScreen {
+        //     bindings = <&kp PRINTSCREEN>;
+        //     key-positions = <16 22>;
+        // }
 
         bootloaderLeft {
             bindings = <&bootloader>;
@@ -289,7 +289,7 @@
             // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
                    &trans      &kp EXCL       &kp AT       &kp HASH       &kp DLLR      &kp PRCNT         &kp UNDER     &kp EQUAL     &kp LBKT      &kp RBKT      &kp BSLH      &kp GRAVE
             // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                   &kp CARET      &kp AMPS    &kp KP_MULTIPLY &kp LPAR      &kp RPAR      &kp DEL         &kp MINUS      &kp PLUS     &kp LBRC      &kp RBRC      &kp PIPE      &kp TILDE
+                   &kp CARET    &kp AMPS    &kp KP_MULTIPLY &kp LPAR      &kp RPAR      &kp DEL           &kp MINUS      &kp PLUS     &kp LBRC      &kp RBRC      &kp PIPE      &kp TILDE
             // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
                                                               &trans       &trans         &trans           &trans        &trans    
             //                                           ╰─────────────┤─────────────┤─────────────┤   ├─────────────┼─────────────╯
