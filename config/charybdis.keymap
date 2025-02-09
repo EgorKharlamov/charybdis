@@ -127,8 +127,8 @@
         td_mt_q: tap_dance_mod_tap {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&mt LSHIFT Q>, <&kp ESC>;
+            tapping-term-ms = <300>;
+            bindings = <&mt &mo VIM Q>, <&kp ESC>;
         };
     };
 
