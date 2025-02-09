@@ -128,7 +128,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <300>;
-            bindings = <&mt &mo VIM Q>, <&kp ESC>;
+            bindings = <&kp Q>, <&mo VIM>, <&kp ESC>;
         };
     };
 
