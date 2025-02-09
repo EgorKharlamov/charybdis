@@ -25,7 +25,7 @@
         };
 
         SwitchToEng {
-            bindings = <&kp LC(LA(LS(R)))>;
+            bindings = <&kp LC(LA(LS(E)))>;
             key-positions = <32 31>;
         };
 
