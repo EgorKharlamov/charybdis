@@ -6,6 +6,7 @@
 #define MOUSESNIPE 5
 #define VIM 6
 #define SYMBOLS 7
+#define SYMBOLS_F 8
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
@@ -30,12 +31,12 @@
 
         SwitchToRus {
             bindings = <&kp LC(LA(LS(E)))>;
-            key-positions = <27 28>;
+            key-positions = <25 26>;
         };
 
         SwitchToEng {
             bindings = <&kp LC(LA(LS(R)))>;
-            key-positions = <32 31>;
+            key-positions = <34 33>;
         };
 
         PrintScreen {
@@ -136,6 +137,12 @@
             tapping-term-ms = <200>;
             bindings = <&mo>, <&kp>;
         };
+        td_mt_symbols: tap_dance_mod_tap {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <300>;
+            bindings = <&mo SYMBOLS>, <&mo SYMBOLS_F>;
+        };
     };
 
     keymap {
@@ -156,7 +163,7 @@
             // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
                                                             &mo LOWER     &kp BSPC     &kp LSHIFT          &kp RET      &kp SPACE
             //                                           ╰─────────────┤─────────────┤─────────────┤   ├─────────────┼─────────────╯
-                                                                         &mo SYMBOLS    &kp SPACE         &kp BSPC
+                                                                       &td_mt_symbols    &kp SPACE         &kp BSPC
             //                                                         ╰─────────────┴─────────────╯   ╰─────────────╯
             >;
         };
@@ -290,6 +297,26 @@
                    &trans      &kp EXCL       &kp AT       &kp HASH       &kp DLLR      &kp PRCNT         &kp CARET     &kp AMPS    &kp KP_MULTIPLY &kp LPAR      &kp RPAR      &kp GRAVE      
             // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
                    &trans      &kp UNDER     &kp EQUAL     &kp LBKT      &kp RBKT      &kp BSLH           &kp MINUS      &kp PLUS     &kp LBRC      &kp RBRC      &kp PIPE      &kp TILDE
+            // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
+                                                              &trans       &trans         &trans           &trans        &trans    
+            //                                           ╰─────────────┤─────────────┤─────────────┤   ├─────────────┼─────────────╯
+                                                                            &trans        &trans           &trans
+            //                                                         ╰─────────────┴─────────────╯   ╰─────────────╯
+            >;
+        };
+
+        Symbols_f {
+            label = "Symbols_f";
+            display-name = "Symbols_f";
+            bindings = <
+            // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
+                   &trans        &trans       &trans         &trans        &trans        &trans             &trans       &trans         &trans        &trans        &trans        &trans
+            // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+                   &trans        &kp F1       &kp F2        &kp F3         &kp F4       &kp F5            &kp F6        &kp F7        &kp F8        &kp F9        &kp F10        &trans
+            // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+                   &trans        &trans       &trans         &trans       &trans         &trans            &trans         &trans       &trans        &trans      &trans           &trans      
+            // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+                   &trans        &kp DEL       &trans         &trans      &trans          &trans           &kp F11        &kp F12     &trans         &trans        &trans         &trans
             // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
                                                               &trans       &trans         &trans           &trans        &trans    
             //                                           ╰─────────────┤─────────────┤─────────────┤   ├─────────────┼─────────────╯
