@@ -29,12 +29,12 @@
         };
 
         SwitchToRus {
-            bindings = <&kp LC(LA(LS(R)))>;
+            bindings = <&kp LC(LA(LS(E)))>;
             key-positions = <27 28>;
         };
 
         SwitchToEng {
-            bindings = <&kp LC(LA(LS(E)))>;
+            bindings = <&kp LC(LA(LS(R)))>;
             key-positions = <32 31>;
         };
 
