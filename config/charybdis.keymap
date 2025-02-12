@@ -42,7 +42,7 @@
 
         PrintScreen {
             bindings = <&kp PRINTSCREEN>;
-            key-positions = <16 22>;
+            key-positions = <10 22>;
         };
 
         bootloaderLeft {
