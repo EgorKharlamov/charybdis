@@ -33,19 +33,16 @@
         ToMouseSnipeLayer {
             bindings = <&to MOUSESNIPE>;
             key-positions = <34 35>;
-            slow-release = true;
         };
 
         SwitchToRus {
             bindings = <&kp LC(LA(LS(E)))>;
             key-positions = <25 26>;
-            slow-release = true;
         };
 
         SwitchToEng {
             bindings = <&kp LC(LA(LS(R)))>;
             key-positions = <34 33>;
-            slow-release = true;
         };
 
         PrintScreen {
