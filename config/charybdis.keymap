@@ -148,7 +148,7 @@
             tapping-term-ms = <200>;
             quick-tap-ms = <0>;
             flavor = "balanced";
-            bindings = <&kp>, <&td>;
+            bindings = <&kp>, <&kp>, <&kp>;
         };
         mo_kp: behavior_mo_tog {
             compatible = "zmk,behavior-hold-tap";
