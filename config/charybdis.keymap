@@ -155,7 +155,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&bhm LSHFT F>, <&kp 0 F>;
+            bindings = <&bhm LSHFT F>, <&hold_caps_word 0 F>;
         };
 
         mo_kp: behavior_mo_tog {
