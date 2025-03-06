@@ -159,14 +159,14 @@
             bindings = <&bhm LSHFT F>, <&hold_caps_word 0 F>;
         };
 
-        mo_kp: behavior_mo_tog {
+        mo_kp: behavior_mo_kp {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "hold-preferred";
             tapping-term-ms = <200>;
             bindings = <&mo>, <&kp>;
         };
-        to_kp: behavior_mo_tog {
+        to_kp: behavior_to_kp {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "hold-preferred";
