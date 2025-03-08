@@ -21,19 +21,9 @@
     combos {
         compatible = "zmk,combos";
 
-        ParaLeft {
-            bindings = <&kp LEFT_PARENTHESIS>;
-            key-positions = <4 16>;
-        };
-
-        ParaRight {
-            bindings = <&kp RIGHT_PARENTHESIS>;
-            key-positions = <7 19>;
-        };
-
         ToMouseSnipeLayer {
             bindings = <&to MOUSESNIPE>;
-            key-positions = <34 35>;
+            key-positions = <34 46>;
         };
 
         SwitchToRus {
@@ -46,9 +36,19 @@
             key-positions = <34 33>;
         };
 
-        PrintScreen {
+        PrintScreenRight {
             bindings = <&kp PRINTSCREEN>;
-            key-positions = <10 22>;
+            key-positions = <22 34>;
+        };
+
+        PrintScreenLeft {
+            bindings = <&kp PRINTSCREEN>;
+            key-positions = <13 25>;
+        };
+
+        ToGameLayer { 
+            bindings = <&to GAME>;
+            key-positions = <21 22>;
         };
 
         bootloaderLeft {
@@ -122,7 +122,7 @@
         td: tap_dance {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <300>;
             bindings = <&kp>, <&kp>;
         };
         lt: layer_tap {
@@ -368,11 +368,11 @@
             // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
                    &trans        &trans       &trans         &trans       &trans         &trans            &trans         &trans       &trans        &trans      &trans          &trans      
             // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                   &trans        &kp ESC      &kp TAB        &trans       &trans         &trans            &trans         &trans       &trans        &trans      &trans        &trans      
+                   &trans        &kp TAB      &kp ESC        &trans       &trans         &trans            &trans         &trans       &trans        &trans      &trans        &trans      
             // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                   &trans        &trans       &trans         &trans       &trans         &to GAME            &trans         &trans       &trans        &trans      &trans          &trans      
+                   &trans        &trans       &trans         &trans       &trans         &trans            &trans         &trans       &trans        &trans      &trans          &trans      
             // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                   &trans        &kp DEL       &trans         &trans       &trans         &trans            &trans       &trans       &trans         &trans        &trans        &trans      
+                   &trans    &td DEL LS(DEL)  &trans     &td LC(C) LC(LS(C)) &td LC(V) LC(LS(V))     &trans            &trans       &trans       &trans         &trans        &trans        &trans      
             // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
                                                               &trans       &trans         &trans           &trans        &trans    
             //                                           ╰─────────────┤─────────────┤─────────────┤   ├─────────────┼─────────────╯
