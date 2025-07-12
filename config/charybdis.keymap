@@ -68,7 +68,7 @@
     trackball_listener {
         compatible = "zmk,input-behavior-listener";
         device = <&vtrackball>;
-        layers = <0 2 3 5 6 8>;
+        layers = <0 2 3 5 8>;
         evt-type = <INPUT_EV_REL>;
         x-input-code = <INPUT_REL_X>;
         y-input-code = <INPUT_REL_Y>;
@@ -86,7 +86,6 @@
         y-input-code = <INPUT_REL_Y>;
         scale-multiplier = <1>;
         scale-divisor = <8>;
-        bindings = <&ib_toggle_layer 6>;
     };
 
     trackball_scroll_listener {
