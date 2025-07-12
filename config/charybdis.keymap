@@ -68,7 +68,7 @@
     trackball_listener {
         compatible = "zmk,input-behavior-listener";
         device = <&vtrackball>;
-        layers = <0 2 3 4 6 7>;
+        layers = <0 2 3 5 6 8>;
         evt-type = <INPUT_EV_REL>;
         x-input-code = <INPUT_REL_X>;
         y-input-code = <INPUT_REL_Y>;
@@ -80,7 +80,7 @@
     trackball_snipe_listener {
         compatible = "zmk,input-behavior-listener";   
         device = <&vtrackball>;
-        layers = <0 2 3 5 6 7>;
+        layers = <0 2 3 6 7 8>;
         evt-type = <INPUT_EV_REL>;
         x-input-code = <INPUT_REL_X>;
         y-input-code = <INPUT_REL_Y>;
@@ -305,7 +305,7 @@
             // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
                    &trans         &trans       &trans         &trans       &trans         &trans           &trans       &trans         &trans        &trans        &trans        &trans
             // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                   &trans         &trans       &trans         &trans       &trans         &trans        &kp S_D_MOD   &kp S_D_RMOD   &to LOWER     &trans        &trans        &trans
+                   &trans         &trans       &trans         &trans       &trans         &trans           &trans       &trans        &to LOWER     &trans        &trans        &trans
             // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
                    &trans         &trans       &trans         &trans       &trans         &trans      &msc MOVE_X(-50) &msc MOVE_Y(-10) &msc MOVE_Y(10) &msc MOVE_X(50)   &to DEFAULT     &trans
             // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
