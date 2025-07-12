@@ -86,6 +86,7 @@
         y-input-code = <INPUT_REL_Y>;
         scale-multiplier = <1>;
         scale-divisor = <8>;
+        bindings = <&ib_toggle_layer 6>;
     };
 
     trackball_scroll_listener {
