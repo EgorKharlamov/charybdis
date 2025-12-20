@@ -1,7 +1,7 @@
 manifest:
   remotes:
     - name: zmkfirmware
-      url-base: https://github.com/zmkfirmware      # не petejohanson!
+      url-base: https://github.com/petejohanson
     - name: badjeff
       url-base: https://github.com/badjeff
     - name: infused-kim                           # PS/2 UART
